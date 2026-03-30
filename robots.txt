@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pavla-mudrochova.cz/sitemap.xml

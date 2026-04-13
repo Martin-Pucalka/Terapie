@@ -13,20 +13,29 @@
     <meta property="og:title" content="Terapie Olomouc | Pavla Mudrochovová" />
     <meta property="og:description" content="Soukromá terapeutická praxe v Olomouci. Individuální přístup, bezpečný prostor pro vaše myšlenky a emoce." />
     <meta property="og:url" content="https://pavla-mudrochova.cz/" />
-    <meta property="og:image" content="https://pavla-mudrochova.cz/photo.jpg" />
+    <meta property="og:image" content="https://pavla-mudrochova.cz/images/photo.webp" />
     <meta property="og:type" content="website" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/favicons/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="images/favicons/site.webmanifest" />
   </head>
   <body>
     <nav aria-label="Hlavní navigace">
       <div class="nav-inner">
-        <a class="nav-brand" href="#uvod">Pavla Mudrochovová</a>
+        <a class="nav-brand" href="#uvod"><img src="images/logo.webp" alt="Logo" class="nav-logo" width="32" height="32" />Pavla Mudrochovová</a>
         <button class="nav-toggle" aria-label="Otevřít menu" aria-expanded="false">&#9776;</button>
         <ul class="nav-links" role="list">
           <li><a href="#o-mne">O mně</a></li>
+          <li><a href="#praxe">Praxe</a></li>
+          <li><a href="#zkusenosti">Zkušenosti</a></li>
+          <li><a href="#kbt">KBT</a></li>
+          <li><a href="#prubeh">Průběh terapie</a></li>
           <li><a href="#cenik">Ceník</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
         </ul>
@@ -49,12 +58,72 @@
         <div class="container section-grid">
           <div class="section-text">
             <h2>O mně</h2>
-            <p>Jsem terapeutka se zaměřením na individuální práci s dospělými klienty. Věnuji se tématům jako jsou úzkosti, deprese, vztahové obtíže, životní přechody a sebepoznání.</p>
-            <p>Pracuji v duchu integrativního přístupu &mdash; vždy vycházím z toho, co potřebujete právě vy. Každé sezení je přizpůsobeno vašemu tempu a cílům.</p>
-            <p>Mým záměrem je vytvořit bezpečný a důvěrný prostor, kde se můžete otevřeně vyjádřit bez odsuzování.</p>
+            <p>Jmenuji se Pavla Mudrochová, jsem lékařka se specializací v oboru psychiatrie a působím na psychoterapeutickém oddělení v nemocnici a v psychiatrické ambulanci.</p>
+            <p>Jsem také terapeutkou ve výcviku Kognitivně behaviorální terapie.</p>
           </div>
           <div class="section-photo">
-            <img src="photo.jpg" alt="Pavla Mudrochovová, terapeutka v Olomouci" />
+            <picture>
+              <source srcset="images/photo.webp" type="image/webp" />
+              <img src="images/photo.jpg" alt="Pavla Mudrochová, terapeutka v Olomouci" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <!-- Praxe -->
+      <section id="praxe" class="section-alt" aria-label="Praxe">
+        <div class="container">
+          <h2>Praxe</h2>
+          <p>
+            V rámci KBT pracuji s důrazem na všímavost k aktuálnímu prožívání a s respektem k individuálnímu tempu. Společně hledáme porozumění tomu, co se děje, i konkrétní způsoby, jak dělat změny v
+            každodenním fungování.
+          </p>
+        </div>
+      </section>
+
+      <!-- Zkušenosti -->
+      <section id="zkusenosti" aria-label="Zkušenosti">
+        <div class="container">
+          <h2>Zkušenosti</h2>
+          <ul>
+            <li>Lékařská fakulta Univerzity Palackého v Olomouci, obor všeobecné lékařství (2014–2020)</li>
+            <li>Praxe v oboru psychiatrie v Psychiatrické nemocnici v Kroměříži, na psychiatrické klinice Fakultní nemocnice Olomouc a v Psychiatrické léčebně Šternberk (2020–doposud)</li>
+            <li>Pětiletý psychoterapeutický výcvik v Mezinárodním institutu Kognitivně behaviorální terapie Odyssea (KBT) (2024–doposud)</li>
+            <li>Kurzy psychoterapie &mdash; integrativní směry, psychodynamické směry na Psychiatrické klinice ve FNOL (120 hodin)</li>
+            <li>Kurz Základy Dialektické behaviorální terapie (15 hodin)</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Co je to KBT -->
+      <section id="kbt" class="section-alt" aria-label="Co je to KBT">
+        <div class="container">
+          <h2>Co je to KBT?</h2>
+          <ul>
+            <li>KBT (kognitivně behaviorální terapie) se zaměřuje na naše myšlenky a jejich působení na naše emoce a chování.</li>
+            <li>Vychází z předpokladu, že psychické problémy lze ovlivnit změnou navyklých vzorců myšlení a chování.</li>
+            <li>
+              KBT je založena na vzájemné spolupráci klienta a terapeuta a zaměřuje se na konkrétní problém a cíl. Klient je aktivním účastníkem procesu, což zahrnuje domácí úkoly, tímto se proces
+              terapie odehrává i mezi sezeními a klient se stává soběstačným.
+            </li>
+            <li>KBT se uplatňuje u celé řady psychických obtíží (úzkostné poruchy, porucha nálady, obsedantně kompulzivní porucha, poruchy spánku atd.)</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Průběh terapie -->
+      <section id="prubeh" aria-label="Průběh terapie">
+        <div class="container section-grid">
+          <div class="section-text">
+            <h2>Průběh terapie</h2>
+            <p>Terapie probíhá formou pravidelných setkání (online/osobně).</p>
+            <p>1 sezení trvá 60 minut / 90 minut, zpočátku je vhodná frekvence 1× týdně.</p>
+          </div>
+          <div class="section-photo">
+            <picture>
+              <source srcset="images/room.webp" type="image/webp" />
+              <img src="images/room.jpg" alt="Terapeutická místnost v Olomouci" loading="lazy" decoding="async" />
+            </picture>
           </div>
         </div>
       </section>
@@ -63,24 +132,20 @@
       <section id="cenik" class="section-alt" aria-label="Ceník">
         <div class="container">
           <h2>Ceník</h2>
-          <div class="price-cards">
-            <div class="price-card">
-              <h3>Individuální sezení</h3>
-              <p class="price">1 200 Kč</p>
-              <p>50 minut &middot; osobně v Olomouci</p>
-            </div>
-            <div class="price-card">
-              <h3>Online sezení</h3>
-              <p class="price">1 100 Kč</p>
-              <p>50 minut &middot; video hovor</p>
-            </div>
-            <div class="price-card">
-              <h3>Vstupní konzultace</h3>
-              <p class="price">zdarma</p>
-              <p>20 minut &middot; telefon nebo video</p>
-            </div>
-          </div>
-          <p class="price-note">Sezení jsou hrazena osobně. Praxe nemá smlouvu se zdravotními pojišťovnami. Zrušení sezení je zpoplatněno při odhlášení méně než 24 hodin předem.</p>
+          <table class="price-table">
+            <tbody>
+              <tr>
+                <td>60 minut</td>
+                <td class="price">900 Kč</td>
+              </tr>
+              <tr>
+                <td>90 minut</td>
+                <td class="price">1 400 Kč</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="price-note">Sezení probíhá po uhrazení platby, online či osobně v Olomouci (přesná adresa bude sdělena po objednání).</p>
+          <p class="price-note">Pavla Mudrochová IČO 24940895</p>
         </div>
       </section>
 
@@ -89,11 +154,9 @@
         <div class="container contact-grid">
           <div class="contact-info">
             <h2>Kontakt</h2>
-            <p>Napište mi přes formulář nebo přímo na email. Ozvu se vám do 48 hodin.</p>
+            <p>Napište mi přes formulář nebo přímo na email.</p>
             <ul class="contact-details" role="list">
               <li><strong>Email:</strong> <a href="mailto:pavla@pavla-mudrochova.cz">pavla@pavla-mudrochova.cz</a></li>
-              <li><strong>Telefon:</strong> <a href="tel:+420777000000">+420 777 000 000</a></li>
-              <li><strong>Místo:</strong> Olomouc</li>
             </ul>
           </div>
           <div class="contact-form-wrap">
@@ -125,7 +188,7 @@
 
     <footer>
       <div class="container">
-        <p>Pavla Mudrochovová &nbsp;&middot;&nbsp; Olomouc &nbsp;&middot;&nbsp; <span id="yr"></span></p>
+        <p>Pavla Mudrochová &nbsp;&middot;&nbsp; Olomouc &nbsp;&middot;&nbsp; <span id="yr"></span></p>
       </div>
     </footer>
 

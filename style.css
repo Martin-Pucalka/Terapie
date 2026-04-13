@@ -92,12 +92,24 @@ nav {
   font-weight: 600;
   letter-spacing: 0.02em;
   color: #2c2c2c;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.nav-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1.2rem;
 }
 
 .nav-links a {
@@ -203,31 +215,25 @@ nav {
   text-align: center;
 }
 
-.price-cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
-  margin-bottom: 1.75rem;
+.price-table {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto 1.75rem;
+  border-collapse: collapse;
 }
 
-.price-card {
-  background: #fff;
-  border-radius: 8px;
-  padding: 2rem 1.5rem;
-  text-align: center;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+.price-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #e8e4df;
+  font-size: 1.05rem;
 }
 
-.price {
+.price-table td.price {
   font-family: "Cormorant Garamond", serif;
-  font-size: 2.1rem;
+  font-size: 1.6rem;
   color: #7a9e7e;
-  margin: 0.5rem 0 0.4rem;
-}
-
-.price-card p:last-child {
-  color: #777;
-  font-size: 0.9rem;
+  text-align: right;
+  white-space: nowrap;
 }
 
 .price-note {
@@ -332,10 +338,6 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 
-  .price-cards {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .contact-grid {
     grid-template-columns: 1fr 1fr;
     align-items: start;
@@ -343,7 +345,7 @@ footer {
 }
 
 /* ── Responsive — mobile nav ──────────────────────────────── */
-@media (max-width: 600px) {
+@media (max-width: 960px) {
   .nav-toggle {
     display: block;
   }

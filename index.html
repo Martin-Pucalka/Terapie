@@ -152,14 +152,14 @@
             <h2>Kontakt</h2>
             <p>Napište mi přes formulář nebo přímo na email.</p>
             <ul class="contact-details" role="list">
-              <li><strong>Email:</strong> <a href="mailto:pavla@pavla-mudrochova.cz">pavla@pavla-mudrochova.cz</a></li>
+              <li><strong>Email:</strong> <a href="mailto:terapie@pavla-mudrochova.cz">terapie@pavla-mudrochova.cz</a></li>
             </ul>
           </div>
           <div class="contact-form-wrap">
-            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" aria-label="Kontaktní formulář" novalidate>
-              <input type="hidden" name="access_key" value="cbb1a3f6-2eb1-4c79-bfb4-72852ab9bf72" />
-              <input type="hidden" name="subject" value="Nová zpráva z webu — pavla-mudrochova.cz" />
-              <input type="hidden" name="redirect" value="false" />
+            <form id="contact-form" action="https://formsubmit.co/ajax/terapie@pavla-mudrochova.cz" method="POST" aria-label="Kontaktní formulář" novalidate>
+              <input type="hidden" name="_subject" value="Nová zpráva z webu — pavla-mudrochova.cz" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
 
               <div class="form-group">
                 <label for="name">Jméno</label>
@@ -217,7 +217,7 @@
         status.textContent = "";
         status.className = "";
         try {
-          const res = await fetch("https://api.web3forms.com/submit", {
+          const res = await fetch(form.action, {
             method: "POST",
             body: new FormData(form),
           });

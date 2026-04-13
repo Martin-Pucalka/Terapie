@@ -231,14 +231,14 @@ nav {
 .price-table td.price {
   font-family: "Cormorant Garamond", serif;
   font-size: 1.6rem;
-  color: #7a9e7e;
+  color: #4e7a52;
   text-align: right;
   white-space: nowrap;
 }
 
 .price-note {
   font-size: 0.85rem;
-  color: #999;
+  color: #706b65;
   max-width: 640px;
   margin: 0 auto;
   text-align: center;
@@ -265,7 +265,7 @@ nav {
 }
 
 .contact-details a {
-  color: #7a9e7e;
+  color: #4e7a52;
 }
 .contact-details a:hover {
   text-decoration: underline;

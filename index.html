@@ -13,7 +13,7 @@
     <meta property="og:title" content="Terapie Olomouc | Pavla Mudrochová" />
     <meta property="og:description" content="Soukromá terapeutická praxe v Olomouci. Individuální přístup, bezpečný prostor pro vaše myšlenky a emoce." />
     <meta property="og:url" content="https://pavla-mudrochova.cz/" />
-    <meta property="og:image" content="https://pavla-mudrochova.cz/images/photo.webp" />
+    <meta property="og:image" content="https://pavla-mudrochova.cz/images/logo.webp" />
     <meta property="og:type" content="website" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="images/favicons/favicon.ico" sizes="any" />
@@ -177,6 +177,14 @@
               <button type="submit" class="btn">Odeslat</button>
               <p id="form-status" role="status" aria-live="polite"></p>
             </form>
+            <div class="form-success" hidden>
+              <svg class="checkmark" viewBox="0 0 52 52" aria-hidden="true">
+                <circle class="checkmark-circle" cx="26" cy="26" r="24" fill="none" />
+                <path class="checkmark-tick" fill="none" d="M14 27l7.8 7.8L38 17" />
+              </svg>
+              <h3>Děkuji za zprávu!</h3>
+              <p>Ozvu se vám co nejdříve.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -223,9 +231,11 @@
           });
           const data = await res.json();
           if (data.success) {
-            status.textContent = "Zpráva byla odeslána. Ozvu se vám co nejdříve.";
-            status.className = "status-ok";
             form.reset();
+            form.hidden = true;
+            const success = form.parentElement.querySelector(".form-success");
+            success.hidden = false;
+            requestAnimationFrame(() => success.classList.add("active"));
           } else {
             throw new Error(data.message);
           }
@@ -233,8 +243,10 @@
           status.textContent = "Nepodařilo se odeslat zprávu. Zkuste to prosím znovu nebo mě kontaktujte emailem.";
           status.className = "status-err";
         } finally {
-          btn.disabled = false;
-          btn.textContent = "Odeslat";
+          if (!form.hidden) {
+            btn.disabled = false;
+            btn.textContent = "Odeslat";
+          }
         }
       });
     </script>

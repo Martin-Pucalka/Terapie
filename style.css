@@ -326,6 +326,78 @@ textarea {
   color: #b94a48;
 }
 
+/* ── Form success state ───────────────────────────────────── */
+.form-success {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.form-success.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.form-success h3 {
+  font-size: 1.5rem;
+  color: #1a2e1a;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-success p {
+  color: #5a5a5a;
+  font-size: 1.05rem;
+}
+
+/* Animated checkmark */
+.checkmark {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+}
+
+.checkmark-circle {
+  stroke: #7a9e7e;
+  stroke-width: 2.5;
+  stroke-dasharray: 151;
+  stroke-dashoffset: 151;
+  stroke-linecap: round;
+}
+
+.checkmark-tick {
+  stroke: #7a9e7e;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 36;
+  stroke-dashoffset: 36;
+}
+
+.form-success.active .checkmark-circle {
+  animation: circle-draw 0.5s ease forwards;
+}
+
+.form-success.active .checkmark-tick {
+  animation: tick-draw 0.35s 0.4s ease forwards;
+}
+
+@keyframes circle-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes tick-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 /* ── Footer ───────────────────────────────────────────────── */
 footer {
   background: #2c2c2c;

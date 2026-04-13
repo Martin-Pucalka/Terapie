@@ -62,6 +62,10 @@ section {
   padding: 5rem 0;
 }
 
+section ul {
+  padding-left: 1.25rem;
+}
+
 .section-alt {
   background: #f0ebe3;
 }

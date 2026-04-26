@@ -166,6 +166,13 @@ nav {
   margin: 0 auto 2.25rem;
 }
 
+.elegant-pink {
+  font-family: 'Dancing Script', cursive;
+  color: #ff1493; /* deep pink */
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
 /* ── Button ───────────────────────────────────────────────── */
 .btn {
   display: inline-block;
